@@ -7,5 +7,18 @@ html {
 
 .header-bar {
   height: 50px;
-  background-color: green;
+  background-color: #222b40;
+}
+
+.header-bar-title{
+  color:white;
+  font-family: athelas, serif;
+}
+
+.landing-title{
+  font-family: athelas, serif;
+}
+
+.landing-page{
+  background: url(/images/background.jpg) no-repeat; /*Remember to add the image and the folder! */
 }
