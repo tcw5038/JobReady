@@ -17,9 +17,13 @@ export class HeaderBar extends React.Component {
     }
     return (
       <div className="header-bar">
-        <h1 className="header-bar-title">JobReady</h1>
-        {logOutButton}
+       <div className="header-bar-right">
+          <a href="#signout">Sign out</a>
+          <a href="#home">Home</a>
+        </div>
+        <div className="header-bar-title">JobReady</div>
       </div>
+      
     );
   }
 }

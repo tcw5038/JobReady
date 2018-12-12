@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, withRouter } from "react-router-dom";
 
-import HeaderBar from "./header-bar";
+//Removed header bar from app.js. Does not seem like the right place for it
 import LandingPage from "./LandingPage";
 import Home from "./Home";
 import Dashboard from "./dashboard";
@@ -42,7 +42,6 @@ export class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <HeaderBar />
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/dashboard" component={Dashboard} />
