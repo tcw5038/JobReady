@@ -31,14 +31,14 @@ export class RegistrationForm extends React.Component {
                 <Field
                     component={Input}
                     type="text"
-                    name="username"
+                    name="usernameSignup"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
                 <label htmlFor="password">Password:</label>
                 <Field
                     component={Input}
                     type="password"
-                    name="password"
+                    name="passwordSignup"
                     validate={[required, passwordLength, isTrimmed]}
                 />
                 <label htmlFor="passwordConfirm">Confirm password:</label>
@@ -50,6 +50,7 @@ export class RegistrationForm extends React.Component {
                 />
                 <button
                     type="submit"
+                    className="signup-button"
                     disabled={this.props.pristine || this.props.submitting}>
                     Register
                 </button>

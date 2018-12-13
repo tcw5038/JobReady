@@ -19,7 +19,8 @@ export function LandingPage(props) {
           <a href="#demo">Demo</a>
           <a href="/register">Sign up</a>
         </div>
-        <div className="header-bar-title">JobReady</div>
+        <div className="header-bar-title">JobReady
+        </div>
       </div>
       <div className="splash-wrapper">
         <div className='row'>
