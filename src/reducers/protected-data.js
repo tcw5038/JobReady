@@ -1,22 +1,39 @@
 import {
-    FETCH_PROTECTED_DATA_SUCCESS,
-    FETCH_PROTECTED_DATA_ERROR
+    FETCH_APPLICATIONS_SUCCESS,
+    FETCH_APPLICATIONS_ERROR,
+    FETCH_SINGLE_APPLICATION_SUCCESS,
+    FETCH_SINGLE_APPLICATION_ERROR
+    
 } from '../actions/protected-data';
 
 const initialState = {
-    data: '',
-    error: null
+    error: null,
+    applications:[],
+    applicationDetails:{
+        companyName:'',
+        positionTitle:'',
+        location:'',
+        dateAdded:new Date(),
+        postingLink:'',
+        status:'Pending',
+        notes:''
+    }
 };
 
 export default function reducer(state = initialState, action) {
-    if (action.type === FETCH_PROTECTED_DATA_SUCCESS) {
+    if (action.type === FETCH_APPLICATIONS_SUCCESS) {
         return Object.assign({}, state, {
-            data: action.data,
+            applications: action.data,
             error: null
         });
-    } else if (action.type === FETCH_PROTECTED_DATA_ERROR) {
+    } else if (action.type === FETCH_APPLICATIONS_ERROR || FETCH_SINGLE_APPLICATION_ERROR) {
         return Object.assign({}, state, {
             error: action.error
+        });
+    } else if(action.type === FETCH_SINGLE_APPLICATION_SUCCESS) {
+        return Object.assign({}, state, {
+            applicationDetails:action.data,
+            error: null
         });
     }
     return state;
