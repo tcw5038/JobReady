@@ -1,25 +1,38 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {fetchSingleApplicationById, deleteApplication} from "../actions/protected-data";
+import {connect} from "react-redux";
 
-export default function JobCard (props) {
+export class JobCard extends React.Component {
+    componentDidMount() {
+        this.props.dispatch(fetchSingleApplicationById(this.props.id));
+      }
+      render(){
         return(
             <div className="job-card">
                 <div className='row'>
                     <div className='column'>
-                        <div className="job-title">{props.positionTitle}</div>
-                        <div className="company-name">{props.companyName}</div>
-                        <div className="job-status">{props.status}</div>
+                        <div className="job-title">{this.props.positionTitle} at {this.props.companyName}</div>
+                        <div className="job-status">{this.props.status}</div>
                     </div>  
                     <div className='column'>   
-                        <div className="job-location">{props.location}</div>
-                        <div className="job-date-added">{props.dateAdded}</div>
+                        <div className="job-location">{this.props.location}</div>
+                        <div className="job-date-added">{this.props.dateAdded}</div>
                     </div>
                     <div className="column">
-                        <Link to="/editApplication"><button>Edit Application</button></Link>
-                        <button>Delete Application</button>
+                        <Link to="/editApplication"><button className="job-card-button">Edit Application</button></Link>
+                        <button className="job-card-button" onClick={() => {this.props.dispatch(deleteApplication(this.props.id))}}>Delete Application</button>
                         
                     </div> 
                 </div>
             </div>
         )
+    }     
 }
+const mapStateToProps = state => {
+    return {
+      applicationDetails: state.protectedData.applicationDetails,
+    };
+  };
+  
+  export default connect(mapStateToProps)(JobCard);

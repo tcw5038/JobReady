@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import requiresLogin from './requires-login';
 import { Link, Redirect } from "react-router-dom";
 import HeaderBar from "../header-bar";
 import "./index.css";
 
-export default function ApplicationDetailPage(props) {
+export function ApplicationDetailPage(props) {
     return (
       <div className="home">
         <HeaderBar />
@@ -14,18 +15,8 @@ export default function ApplicationDetailPage(props) {
         <div className="postingLink-detail">{props.postingLink}</div>
         <div className="status-detail">{props.status}</div>
         <div className="notes-detail">{props.notes}</div>
-        
       </div>
     );
   }
 
-  /*
-  companyName: this.companyName || '',
-    positionTitle: this.positionTitle || '',
-    location: this.location || '',
-    dateAdded: this.dateAdded,
-    postingLink: this.postingLink || '',
-    status: this.status || '',
-    notes: this.notes || '',
-  
-  */
+  export default requiresLogin()(connect(mapStateToProps)(ApplicationDetailPage));

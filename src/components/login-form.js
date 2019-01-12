@@ -29,7 +29,7 @@ export class LoginForm extends React.Component {
                 <Field
                     component={Input}
                     type="text"
-                    name="usernameLogin"
+                    name="username"
                     id="username"
                     validate={[required, nonEmpty]}
                 />
@@ -37,7 +37,7 @@ export class LoginForm extends React.Component {
                 <Field
                     component={Input}
                     type="password"
-                    name="passwordLogin"
+                    name="password"
                     id="password"
                     validate={[required, nonEmpty]}
                 />

@@ -1,15 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
-
 import LoginForm from "../login-form";
 import RegistrationForm from "../registration-form";
 import HeaderBar from "../header-bar"
 
 export function LandingPage(props) {
-  // If we are logged in redirect straight to the user's dashboard
   if (props.loggedIn) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/home" />;
   }
 
   return (
@@ -30,8 +28,6 @@ export function LandingPage(props) {
         </div>
         <div className='column'>
         <LoginForm />
-          {/*<RegistrationForm />  Not sure how this works when they are on the same page...hide show??? */}
-          {/*<Link to="/register">Register</Link>*/}
         </div>
       </div>
     </div>
@@ -44,7 +40,6 @@ export function LandingPage(props) {
           <p className='description-text'>Keep track of all your job postings so that you can worry about more important things happening in your life.</p>
         </div>
         <div className='column'>
-         
           <img className="description-image" src='/images/architecture.jpg'></img> 
           <p className='description-text'>Quickly look through jobs that you applied to, ones you are currently interviewing for, and ones that you still need to apply for.</p>
         </div>

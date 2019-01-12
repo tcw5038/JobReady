@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
+import requiresLogin from '../requires-login';
 import HeaderBar from "../header-bar";
 import JobCard from "../job-card";
 import FilterContainer from "../application-filter";
 import {fetchApplications} from "../../actions/protected-data";
-//import ApplicationFilter from "../application-filter"; Should I make a separate component for this as well?
 import "./index.css";
 
 export class HomePage extends React.Component {
@@ -22,7 +22,7 @@ export class HomePage extends React.Component {
                   <FilterContainer />
                   <Link to="/addApplication"><button className="add-application-button">Add new application</button></Link>
                 </div>
-              <div className="job-container">
+              <div className="job-container">   
                 {applications}
               </div> 
       </div>
@@ -34,6 +34,4 @@ const mapStateToProps = state => ({
   applications:state.protectedData.applications
 });
 
-export default connect(mapStateToProps)(HomePage);
-
-//potential solution to the checkbox filtering system can be found here: https://codepen.io/jedmac/pen/zvvBYp
+export default requiresLogin()(connect(mapStateToProps)(HomePage));

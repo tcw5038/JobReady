@@ -91,16 +91,54 @@ export const deleteApplication = id => (dispatch, getState) => {//deletes a sing
 
 export const addApplication = application => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/jobs`, {
+    return fetch(`${API_BASE_URL}/applications`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${authToken}`
-    },//add body then dispatch fetchApplications
+    },
+    body:JSON.stringify({
+        //populate the body in here
+        companyName:application.companyName,
+        positionTitle:application.positionTitle,
+        location:application.location,
+        dateAdded:application.dateAdded,
+        postingLink:application.postingLink,
+        status:application.status,
+        notes:application.notes,
+        id:application.id
+
+        })
     })
+    .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list
+    .catch(error => {
+        dispatch(fetchApplicationsError(error));
+    });
 }
 
 export const editApplication = application => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    //not quite sure how to do this one currently, come back to it later
-}
+    return fetch(`${API_BASE_URL}/applications/${application.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`
+        },
+        body:JSON.stringify({
+            //populate the body in here
+            companyName:application.companyName,
+            positionTitle:application.positionTitle,
+            location:application.location,
+            dateAdded:application.dateAdded,
+            postingLink:application.postingLink,
+            status:application.status,
+            notes:application.notes,
+            id:application.id
+    
+            })
+        })
+        .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list
+        .catch(error => {
+            dispatch(fetchApplicationsError(error));
+        });
+    }

@@ -7,23 +7,26 @@ export class HeaderBar extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
+    //use props.history to move back to the landing page
   }
 
   render() {
     // Only render the log out button if we are logged in
     let logOutButton;
+    let homeButton;
     if (this.props.loggedIn) {
-      logOutButton = <button onClick={() => this.logOut()}>Log out</button>;
+      logOutButton = <a onClick={() => this.logOut()}>Log out</a>;
+      homeButton = <a href="/home">Home</a>
+      //homeButton
     }
     return (
       <div className="header-bar">
        <div className="header-bar-right">
-          <a href="#signout">Sign out</a>
-          <a href="/home">Home</a>
+       {homeButton}
+       {logOutButton}
         </div>
         <div className="header-bar-title">JobReady</div>
       </div>
-      
     );
   }
 }

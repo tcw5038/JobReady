@@ -37,15 +37,16 @@
 /*----------JOB CARDS----------*/
 
 .job-container{
-  padding-top:70px;
+  padding-top:50px;
 }
 
 .job-card{
   background-color:white;
   width:90%;
-  height:140px;
+  height:100px;
   margin-left:auto;
   margin-right:auto;
+  padding-top:40px;
   border-radius:4px;
   margin-bottom:20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -61,6 +62,24 @@
   padding-left:30px;
 }
 
+.job-title{
+  font-weight:600;
+  font-size:20px;
+}
+
+
+/*----------JOB BUTTONS FOR EDIT AND DELETE----------*/
+
+.job-card-button{
+  color:white;
+  font-size:16px;
+  background-color:#222b40;
+  width:200px;
+}
+
+.job-card-button:hover{
+  cursor:pointer;
+}
 
 /*----------PAGE LEVEL----------*/
 
@@ -70,5 +89,54 @@
 }
 
 .page-action-container{
+
+}
+
+@media only screen and (max-width:600px){
+  .job-title, .job-status{
+    padding-left:0;
+  }
+  
+  .job-title{
+    font-weight:600;
+    font-size:14px;
+  }
+  .job-card-button{
+    color:white;
+    font-size:16px;
+    background-color:#222b40;
+    width:200px;
+    height:30px;
+    margin-right:auto;
+    margin-left:auto;  }
+
+  .job-card{
+    text-align:center;
+    width:95%;
+    height:175px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:20px;
+    border-radius:4px;
+    margin-bottom:20px;
+  }
+
+  .add-application-button{
+    float:none;
+    display:block;
+    width:90%;
+    height:40px;
+    color:white;
+    font-size:16px;
+    background-color:#222b40;
+    border-radius: 4px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:10px;
+    }
+
+    .job-container{
+      padding-top:20px;
+    }
 
 }

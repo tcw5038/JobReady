@@ -1,43 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
+import requiresLogin from '../requires-login';
 import { Link, Redirect } from "react-router-dom";
 import HeaderBar from "../header-bar";
+import addApplication from "../../actions/protected-data";
+import AddApplicationForm from "../add-application-form";
 import "./index.css";
 
-export default function AddApplicationPage(props) {
+export function AddApplicationPage(props) {
   return (
     <div className="home">
       <HeaderBar />
       <h1 className="signup-title">Add a new job application</h1>
-      <form className="add-application-form">
-        <label htmlFor="companyName">Company Name:</label> 
-        <input type="text" name="companyName" className="companyName"></input>
-        <label htmlFor="positionTitle">Position Title:</label> 
-        <input type="text" name="positionTitle" className="positionTitle"></input>
-        <label htmlFor="location">Location:</label> 
-        <input type="text" name="location" className="location"></input>
-        <label htmlFor="postingLink">Link to job posting:</label> 
-        <input type="text" name="postingLink" className="postingLink"></input>
-            <div>
-            <div>Where are you in the application process?:</div><br></br>
-                    <div className="radiobutton"><label><input type="radio" rel="pending"/>Pending Completion</label></div>
-                    <div className="radiobutton"><label><input type="radio" rel="applied"/>Applied</label></div>
-                    <div className="radiobutton"><label><input type="radio" rel="interviewed"/>Interviewing</label></div>
-                    <div className="radiobutton"><label><input type="radio" rel="offered"/>Offered position</label></div>
-            </div>
-            <br></br>
-        <label htmlFor="notes">Notes:</label> 
-        <input type="text" name="notes" className="notes"></input><br></br>
-        <button className="add-application-form-button">Add new application</button>
-  
-        
-      </form>
-    </div>
-    
+      <AddApplicationForm />
+    </div>    
   );
 }
 
-/*
-<label htmlFor="firstName">First name:</label>
-                <Field component={Input} type="text" name="firstName" />
-*/ 
+export default requiresLogin()(AddApplicationPage);
