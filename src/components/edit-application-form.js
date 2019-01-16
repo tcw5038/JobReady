@@ -1,20 +1,16 @@
 import React from "react";
 import {Field, reduxForm, focus} from 'redux-form';
-import {addApplication, fetchApplications, editApplication} from "../actions/protected-data";
+import {fetchApplications, editApplication} from "../actions/protected-data";
 import Input from './input';
-import "../index.css";
 
-
-
-export class AddApplicationForm extends React.Component {
+export class EditApplicationForm extends React.Component {
     onSubmit(values) {
         const {companyName, positionTitle, location, postingLink, notes} = values;
         const application = {companyName, positionTitle, location, postingLink, notes};
-        console.log(this.props.application);       
+        console.log(this.props.application);
             return this.props
-            .dispatch(addApplication(application))
+            .dispatch(editApplication(application))
             .then(() => this.props.dispatch(fetchApplications()));
-           //} 
     }
     render(){
         return(
@@ -38,14 +34,14 @@ export class AddApplicationForm extends React.Component {
                     <br></br>
                 <label htmlFor="notes">Notes:</label> 
                 <Field component={Input} type="text" name="notes" className="notes"/><br></br>
-                <button type="submit" className="add-application-form-button">Add new application</button>{/*Need to call our action here to collect the application information*/}
+                <button type="submit" className="add-application-form-button">Edit application</button>
             </form>
         )
     }
 }
 
 export default reduxForm({
-    form: 'add-application',
+    form: 'edit-application',
     onSubmitFail: (errors, dispatch) =>
-        dispatch(focus('add-application', Object.keys(errors)[0]))
-})(AddApplicationForm);
+        dispatch(focus('edit-application', Object.keys(errors)[0]))
+})(EditApplicationForm);

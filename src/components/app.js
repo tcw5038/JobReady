@@ -9,6 +9,9 @@ import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
 import AddApplicationPage from "./AddApplicationPage";
 import EditApplicationPage from "./EditApplicationPage";
+import ApplicationDetailPage from "./ApplicationDetailPage";
+
+
 import { refreshAuthToken } from "../actions/auth";
 
 export class App extends React.Component {
@@ -50,6 +53,7 @@ export class App extends React.Component {
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/addApplication" component={AddApplicationPage} />
         <Route exact path="/editApplication" component={EditApplicationPage}/>
+
       </div>
     );
   }

@@ -144,8 +144,7 @@ html {
 }
 
 .cta-button:hover{
-  background-color:white;
-  color:#202020;
+  background-color:#222b4094;
   cursor:pointer;
 }
 
@@ -198,7 +197,7 @@ html {
   width:300px;
 }
 
-#firstName, #lastName, #usernameSignup, #passwordSignup, #passwordConfirm{
+#firstName, #lastName, #username, #password, #passwordConfirm, #companyName, #positionTitle, #location, #postingLink, #notes{
   width: 100%;
   padding: 12px;
   margin-top:4px;

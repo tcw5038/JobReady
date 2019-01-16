@@ -125,7 +125,6 @@ export const editApplication = application => (dispatch, getState) => {
           Authorization: `Bearer ${authToken}`
         },
         body:JSON.stringify({
-            //populate the body in here
             companyName:application.companyName,
             positionTitle:application.positionTitle,
             location:application.location,
@@ -134,7 +133,6 @@ export const editApplication = application => (dispatch, getState) => {
             status:application.status,
             notes:application.notes,
             id:application.id
-    
             })
         })
         .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list

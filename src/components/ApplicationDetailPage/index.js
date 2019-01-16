@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { connect } from "react-redux";
 import requiresLogin from './requires-login';
 import { Link, Redirect } from "react-router-dom";
@@ -20,3 +20,4 @@ export function ApplicationDetailPage(props) {
   }
 
   export default requiresLogin()(connect(mapStateToProps)(ApplicationDetailPage));
+*/

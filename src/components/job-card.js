@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 
 export class JobCard extends React.Component {
     componentDidMount() {
+        console.log(this.props)
         this.props.dispatch(fetchSingleApplicationById(this.props.id));
       }
       render(){
@@ -17,14 +18,18 @@ export class JobCard extends React.Component {
                     </div>  
                     <div className='column'>   
                         <div className="job-location">{this.props.location}</div>
-                        <div className="job-date-added">{this.props.dateAdded}</div>
+                        <div className="job-date-added">{this.props.dateAdded}</div>                        
                     </div>
                     <div className="column">
                         <Link to="/editApplication"><button className="job-card-button">Edit Application</button></Link>
+                        {/*<Link to={`/${this.props.id}`}><button className="job-card-button">Edit Application</button></Link>*/}
                         <button className="job-card-button" onClick={() => {this.props.dispatch(deleteApplication(this.props.id))}}>Delete Application</button>
-                        
                     </div> 
+                    <div className="row">
+                        <div className="notes"><b>Notes:</b> {this.props.notes}</div>
+                    </div>
                 </div>
+                
             </div>
         )
     }     

@@ -32,6 +32,7 @@
 
   .add-application-button:hover{
     cursor:pointer;
+    background-color:#222b4094;
   }
 
 /*----------JOB CARDS----------*/
@@ -43,20 +44,20 @@
 .job-card{
   background-color:white;
   width:90%;
-  height:100px;
+  height:175px;
   margin-left:auto;
   margin-right:auto;
   padding-top:40px;
   border-radius:4px;
   margin-bottom:20px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.26);
   transition: 0.3s;
 }
 
-.job-card:hover{
+/*.job-card:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   cursor:pointer;
-}
+}*/
 
 .job-title, .job-status{
   padding-left:30px;
@@ -67,6 +68,10 @@
   font-size:20px;
 }
 
+.notes{
+  padding-left:30px;
+  padding-top:10px;
+}
 
 /*----------JOB BUTTONS FOR EDIT AND DELETE----------*/
 
@@ -75,10 +80,14 @@
   font-size:16px;
   background-color:#222b40;
   width:200px;
+  height:40px;
+  margin-top:5px;
+  border-radius: 4px;
 }
 
 .job-card-button:hover{
   cursor:pointer;
+  background-color:#222b4094;
 }
 
 /*----------PAGE LEVEL----------*/
