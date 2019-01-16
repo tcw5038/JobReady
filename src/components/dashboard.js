@@ -5,7 +5,7 @@ import {fetchProtectedData} from '../actions/protected-data';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
+     //   this.props.dispatch(fetchProtectedData());
     }
 
     render() {

@@ -25,8 +25,9 @@ export const fetchSingleApplicationError = error => ({
     error
 });
 
-export const fetchProtectedData = () => (dispatch, getState) => {
+export const fetchProtectedData = (value) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
+
     return fetch(`${API_BASE_URL}/protected`, {
         method: 'GET',
         headers: {
@@ -42,8 +43,11 @@ export const fetchProtectedData = () => (dispatch, getState) => {
         });
 };
 
-export const fetchApplications = () => (dispatch, getState) => {//fetches all applications for a given user
+export const fetchApplications = value => (dispatch, getState) => {//fetches all applications for a given user
     const authToken = getState().auth.authToken;
+   
+    console.log(value)
+    // TODO: SEND VALUE AS A PARAM
     return fetch(`${API_BASE_URL}/applications`, {
         method:"GET",
         headers: {

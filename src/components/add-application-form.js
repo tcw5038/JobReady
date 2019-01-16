@@ -13,7 +13,7 @@ export class AddApplicationForm extends React.Component {
         console.log(this.props.application);       
             return this.props
             .dispatch(addApplication(application))
-            .then(() => this.props.dispatch(fetchApplications()));
+            .then(() => console.log("REDIRECT"));
            //} 
     }
     render(){

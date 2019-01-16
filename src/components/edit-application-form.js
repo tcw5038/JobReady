@@ -12,7 +12,7 @@ export class EditApplicationForm extends React.Component {
 
         return this.props
             .dispatch(editApplication(application))
-            .then(() => this.props.dispatch(fetchApplications()));
+            .then(() => console.log("REDIRECT"));
     }
     render(){
         return(
