@@ -6,9 +6,11 @@ import Input from './input';
 export class EditApplicationForm extends React.Component {
     onSubmit(values) {
         const {companyName, positionTitle, location, postingLink, notes} = values;
-        const application = {companyName, positionTitle, location, postingLink, notes};
-        console.log(this.props.application);
-            return this.props
+        const application = {companyName, positionTitle, location, postingLink, notes, id:this.props.applicationDetails.id};
+        console.log(application);
+        
+
+        return this.props
             .dispatch(editApplication(application))
             .then(() => this.props.dispatch(fetchApplications()));
     }

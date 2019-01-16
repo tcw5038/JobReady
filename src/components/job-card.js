@@ -21,8 +21,8 @@ export class JobCard extends React.Component {
                         <div className="job-date-added">{this.props.dateAdded}</div>                        
                     </div>
                     <div className="column">
-                        <Link to="/editApplication"><button className="job-card-button">Edit Application</button></Link>
-                        {/*<Link to={`/${this.props.id}`}><button className="job-card-button">Edit Application</button></Link>*/}
+                        {/* <Link to="/editApplication"><button className="job-card-button">Edit Application</button></Link> */}
+                        <Link to={`/edit/${this.props.id}`}><button className="job-card-button">Edit Application</button></Link>
                         <button className="job-card-button" onClick={() => {this.props.dispatch(deleteApplication(this.props.id))}}>Delete Application</button>
                     </div> 
                     <div className="row">

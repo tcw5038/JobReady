@@ -60,6 +60,8 @@ export const fetchApplications = () => (dispatch, getState) => {//fetches all ap
 
 export const fetchSingleApplicationById = id => (dispatch, getState) => {//fetches a single application for a given user using its id
     const authToken = getState().auth.authToken;
+
+
     return fetch(`${API_BASE_URL}/applications/${id}`, {
         method:"GET",
         headers: {
@@ -124,16 +126,7 @@ export const editApplication = application => (dispatch, getState) => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${authToken}`
         },
-        body:JSON.stringify({
-            companyName:application.companyName,
-            positionTitle:application.positionTitle,
-            location:application.location,
-            dateAdded:application.dateAdded,
-            postingLink:application.postingLink,
-            status:application.status,
-            notes:application.notes,
-            id:application.id
-            })
+        body:JSON.stringify(application)
         })
         .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list
         .catch(error => {

@@ -20,13 +20,13 @@ const initialState = {
     }
 };
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {  
     if (action.type === FETCH_APPLICATIONS_SUCCESS) {
         return Object.assign({}, state, {
             applications: action.data,
             error: null
         });
-    } else if (action.type === FETCH_APPLICATIONS_ERROR || FETCH_SINGLE_APPLICATION_ERROR) {
+    } else if (action.type === FETCH_APPLICATIONS_ERROR || action.type === FETCH_SINGLE_APPLICATION_ERROR) {
         return Object.assign({}, state, {
             error: action.error
         });

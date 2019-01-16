@@ -9,8 +9,7 @@ import "./index.css";
 
 export class EditApplicationPage extends React.Component {
   componentDidMount(){
-    console.log(this.props);
-      this.props.dispatch(fetchSingleApplicationById(this.props.id))
+      this.props.dispatch(fetchSingleApplicationById(this.props.match.params.id))
   }
   /*onSubmit(values){
     console.log(values);
@@ -18,15 +17,22 @@ export class EditApplicationPage extends React.Component {
   }*/
 
   render(){
+
+    console.log("EDIT PAGE", this.props)
+
     return (
       <div className="home">
         <HeaderBar />
         <h1 className="signup-title">Edit this job application</h1>
-        <EditApplicationForm onSubmit={values => this.onSubmit(values)}/>
+        <EditApplicationForm applicationDetails={this.props.applicationDetails} onSubmit={values => this.onSubmit(values)}/>
       </div>
     );
   }
 }
-  
-export default requiresLogin()(EditApplicationPage);
 
+
+const mapStateToProps = state => ({
+  applicationDetails:state.protectedData.applicationDetails
+});
+  
+export default requiresLogin()(connect(mapStateToProps)(EditApplicationPage));

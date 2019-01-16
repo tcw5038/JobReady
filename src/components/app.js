@@ -52,7 +52,7 @@ export class App extends React.Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/addApplication" component={AddApplicationPage} />
-        <Route exact path="/editApplication" component={EditApplicationPage}/>
+        <Route exact path="/edit/:id" component={EditApplicationPage}/>
 
       </div>
     );
