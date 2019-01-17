@@ -10,11 +10,15 @@ export class AddApplicationForm extends React.Component {
     onSubmit(values) {
         const {companyName, positionTitle, location, postingLink, notes} = values;
         const application = {companyName, positionTitle, location, postingLink, notes};
-        console.log(this.props.application);       
+        console.log(application);       
             return this.props
             .dispatch(addApplication(application))
-            .then(() => console.log("REDIRECT"));
+            .then(() => this.props.history.push("/home"));
            //} 
+           /*
+           this.props.dispatch(addApplication(application));
+           //return this.props.history.push("/home");
+*/
     }
     render(){
         return(

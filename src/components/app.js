@@ -5,7 +5,6 @@ import { Route, withRouter } from "react-router-dom";
 //Removed header bar from app.js. Does not seem like the right place for it
 import LandingPage from "./LandingPage";
 import Home from "./Home";
-import Dashboard from "./dashboard";
 import RegistrationPage from "./registration-page";
 import AddApplicationPage from "./AddApplicationPage";
 import EditApplicationPage from "./EditApplicationPage";
@@ -49,7 +48,6 @@ export class App extends React.Component {
       <div className="app">
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/home" component={Home} />
-        <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/addApplication" component={AddApplicationPage} />
         <Route exact path="/edit/:id" component={EditApplicationPage}/>

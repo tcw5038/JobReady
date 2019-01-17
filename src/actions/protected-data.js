@@ -25,28 +25,10 @@ export const fetchSingleApplicationError = error => ({
     error
 });
 
-export const fetchProtectedData = (value) => (dispatch, getState) => {
-    const authToken = getState().auth.authToken;
-
-    return fetch(`${API_BASE_URL}/protected`, {
-        method: 'GET',
-        headers: {
-            // Provide our auth token as credentials
-            Authorization: `Bearer ${authToken}`
-        }
-    })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({data}) => dispatch(fetchApplicationsSuccess(data)))
-        .catch(err => {
-            dispatch(fetchApplicationsError(err));
-        });
-};
-
 export const fetchApplications = value => (dispatch, getState) => {//fetches all applications for a given user
     const authToken = getState().auth.authToken;
-   
-    console.log(value)
+   //we want to filter using the value and then return the proper applications
+   console.log(value)
     // TODO: SEND VALUE AS A PARAM
     return fetch(`${API_BASE_URL}/applications`, {
         method:"GET",
@@ -64,8 +46,6 @@ export const fetchApplications = value => (dispatch, getState) => {//fetches all
 
 export const fetchSingleApplicationById = id => (dispatch, getState) => {//fetches a single application for a given user using its id
     const authToken = getState().auth.authToken;
-
-
     return fetch(`${API_BASE_URL}/applications/${id}`, {
         method:"GET",
         headers: {
@@ -97,6 +77,7 @@ export const deleteApplication = id => (dispatch, getState) => {//deletes a sing
 
 export const addApplication = application => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
+    console.log(application);
     return fetch(`${API_BASE_URL}/applications`, {
     method: "POST",
     headers: {
@@ -113,7 +94,6 @@ export const addApplication = application => (dispatch, getState) => {
         status:application.status,
         notes:application.notes,
         id:application.id
-
         })
     })
     .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list
