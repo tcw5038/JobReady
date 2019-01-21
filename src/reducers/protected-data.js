@@ -22,6 +22,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {  
     if (action.type === FETCH_APPLICATIONS_SUCCESS) {
+        console.log(action);
         return Object.assign({}, state, {
             applications: action.data,
             error: null

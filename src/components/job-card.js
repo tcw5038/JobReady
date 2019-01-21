@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 
 export class JobCard extends React.Component {
     componentDidMount() {
-       
         this.props.dispatch(fetchSingleApplicationById(this.props.id));
       }
       render(){

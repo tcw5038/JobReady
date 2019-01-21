@@ -12,8 +12,8 @@ export class AddApplicationForm extends React.Component {
         const application = {companyName, positionTitle, location, postingLink, notes};
         console.log(application);       
             return this.props
-            .dispatch(addApplication(application))
-            .then(() => this.props.history.push("/home"));
+            .dispatch(addApplication(application));
+            //.then(() => this.props.history.push("/home"));
            //} 
            /*
            this.props.dispatch(addApplication(application));

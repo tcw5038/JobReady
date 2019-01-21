@@ -5,6 +5,7 @@
     display:inline;
 }
 
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -19,6 +20,7 @@
     display:inline-block;
   }
 
+
   .add-application-button{
   float:right;
   width:170px;
@@ -32,7 +34,7 @@
 
   .add-application-button:hover{
     cursor:pointer;
-    background-color:#222b4094;
+    background-color:#222b40e1;
   }
 
 /*----------JOB CARDS----------*/
@@ -87,7 +89,7 @@
 
 .job-card-button:hover{
   cursor:pointer;
-  background-color:#222b4094;
+  background-color:#222b40e1;
 }
 
 /*----------PAGE LEVEL----------*/

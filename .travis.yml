@@ -1,0 +1,12 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: VsKdLHGX69dvh3MaHkr0fOEtGtP55/wVZbYlfJCHJ2shjYW6UWkCSdbXugcL4KAQVHZBv+abBH0QtLsJo8pvGae+6ih50zqi8ZseEj0aWbBfkQf+el0lDPnVWseDGsxH2DJNDt9gWk1p2ovkxTH03LXUjyA3694I44axFQJfRRXeru/awO7nKmI/BIpvcOqRLZTyEqnIbIXHtFkkBcisc6QtQrML8x66GaiNsykJkc50r+nBIo4L+zn7Tzs5oBeniDNFIlFcPYMQ+XkqRss4yr8wJkdcMx0utxp17A5A8t/SwmU7n9+hOGAImO5taPP/x39XPreJ73CyCoXmFVUn1lqYJmVzArAkXdvEK60XobXw+kY92azrhczrTUeyjmEJxz9YOxWbVUE7vVhYoe2xsdzkldr4kBmWw2Yquzzosub9pvzB4pkyamyvvTUKE4BGKZwZPFOSFTT8eoXrPW+l4hNjnbLbf28o9xvZn1ThI/39vKt6jTvDZCokNpHsamX+n2WPYKkfowljoptSrkGpcddhbLZTeFwDBFtBUkUxNnn9IRpoYz1ZTul6hFZwV0/BsmlkpJE/iIn1W9pXI+5bb3G9sUHYhKxN5QZHyXsSeyy+Z0+/lBDMKFUNy/kpJGOrkIUDVp6CBfVyk8sHApYOWdXp4/loJQbowX1VesSYmZ8=
+  app: limitless-crag-64641
+  on:
+    repo: tcw5038/JobReady

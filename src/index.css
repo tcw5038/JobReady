@@ -39,8 +39,9 @@ html {
   font-size: 17px;
 }
 
-.header-bar-right a:hover{
+.header-bar-right a:hover {
   font-weight:600;
+  cursor:pointer;
 }
 
 

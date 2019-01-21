@@ -4,7 +4,7 @@ import {normalizeResponseErrors} from './utils';
 export const FETCH_APPLICATIONS_SUCCESS = 'FETCH_APPLICATIONS_SUCCESS';
 export const fetchApplicationsSuccess = data => ({
     type: FETCH_APPLICATIONS_SUCCESS,
-    data
+    data,
 });
 
 export const FETCH_APPLICATIONS_ERROR = 'FETCH_APPLICATIONS_ERROR';
@@ -25,11 +25,29 @@ export const fetchSingleApplicationError = error => ({
     error
 });
 
+/*export const fetchProtectedData = (value) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+
+    return fetch(`${API_BASE_URL}/protected`, {
+        method: 'GET',
+        headers: {
+            // Provide our auth token as credentials
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+        .then(res => normalizeResponseErrors(res))
+        .then(res => res.json())
+        .then(({data}) => dispatch(fetchApplicationsSuccess(data)))
+        .catch(err => {
+            dispatch(fetchApplicationsError(err));
+        });
+};*/
+
 export const fetchApplications = value => (dispatch, getState) => {//fetches all applications for a given user
     const authToken = getState().auth.authToken;
-   //we want to filter using the value and then return the proper applications
-   console.log(value)
+    console.log(value)
     // TODO: SEND VALUE AS A PARAM
+    //then at some point we likely need to filter applications for this value
     return fetch(`${API_BASE_URL}/applications`, {
         method:"GET",
         headers: {
@@ -77,7 +95,6 @@ export const deleteApplication = id => (dispatch, getState) => {//deletes a sing
 
 export const addApplication = application => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    console.log(application);
     return fetch(`${API_BASE_URL}/applications`, {
     method: "POST",
     headers: {
@@ -85,7 +102,6 @@ export const addApplication = application => (dispatch, getState) => {
       Authorization: `Bearer ${authToken}`
     },
     body:JSON.stringify({
-        //populate the body in here
         companyName:application.companyName,
         positionTitle:application.positionTitle,
         location:application.location,
@@ -96,7 +112,7 @@ export const addApplication = application => (dispatch, getState) => {
         id:application.id
         })
     })
-    .then(data => dispatch(fetchApplications()))//fetches all applications after adding the current one so that the user sees an up to date list
+    .then(data => dispatch(fetchApplications()))
     .catch(error => {
         dispatch(fetchApplicationsError(error));
     });
@@ -104,7 +120,7 @@ export const addApplication = application => (dispatch, getState) => {
 
 export const editApplication = application => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/applications/${application.id}`, {
+    return fetch(`${API_BASE_URL}/edit/applications/${application.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

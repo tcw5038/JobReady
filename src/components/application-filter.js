@@ -15,11 +15,11 @@ export class FilterContainer extends React.Component {
         return(
             <div className="application-filter-container">
                 <div>Show:</div>
-                <div onClick={e=> this.handleFilterClicked("")} className="checkbox"><label><input type="radio" value=""/>All</label></div>
-                <div onClick={e=> this.handleFilterClicked("pending")} className="checkbox"><label><input type="radio" value="pending"/>Pending application</label></div>
-                <div onClick={e=> this.handleFilterClicked("applied")} className="checkbox"><label><input type="radio" value="applied"/> Applied</label></div>
-                <div onClick={e=> this.handleFilterClicked("interviewed")} className="checkbox"><label><input type="radio" value="interviewed"/> Interviewing</label></div>
-                <div onClick={e=> this.handleFilterClicked("offered")} className="checkbox"><label><input type="radio" value="offered"/> Offered position</label></div>
+                <div onClick={e=> this.handleFilterClicked("")} className="checkbox"><label><input type="radio" value="" name="filter"/>All</label></div>
+                <div onClick={e=> this.handleFilterClicked("pending")} className="checkbox"><label><input type="radio" value="pending" name="filter"/>Pending application</label></div>
+                <div onClick={e=> this.handleFilterClicked("applied")} className="checkbox"><label><input type="radio" value="applied" name="filter"/> Applied</label></div>
+                <div onClick={e=> this.handleFilterClicked("interviewed")} className="checkbox"><label><input type="radio" value="interviewed" name="filter"/> Interviewing</label></div>
+                <div onClick={e=> this.handleFilterClicked("offered")} className="checkbox"><label><input type="radio" value="offered" name="filter"/> Offered position</label></div>
             </div>
         )
     }
