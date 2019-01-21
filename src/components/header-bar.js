@@ -16,14 +16,14 @@ export class HeaderBar extends React.Component {
     let homeButton;
     if (this.props.loggedIn) {
       logOutButton = <a onClick={() => this.logOut()}>Log out</a>;
-      homeButton = <a href="/home">Home</a>
+      homeButton = <a href="/home">Home</a>;
       //homeButton
     }
     return (
       <div className="header-bar">
-       <div className="header-bar-right">
-       {homeButton}
-       {logOutButton}
+        <div className="header-bar-right">
+          {homeButton}
+          {logOutButton}
         </div>
         <div className="header-bar-title">JobReady</div>
       </div>
