@@ -4,13 +4,13 @@ import { Link, Redirect } from "react-router-dom";
 import requiresLogin from "../requires-login";
 import HeaderBar from "../header-bar";
 import JobCard from "../job-card";
-import FilterContainer from "../application-filter";
+import FilterContainer from "./application-filter";
 import { fetchApplications } from "../../actions/protected-data";
 import "./index.css";
 
 export class HomePage extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchApplications());
+    this.props.dispatch(fetchApplications(""));
     console.log(this.props.applications);
   }
   render() {

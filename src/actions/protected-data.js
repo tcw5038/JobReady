@@ -26,31 +26,10 @@ export const fetchSingleApplicationError = error => ({
   error
 });
 
-/*export const fetchProtectedData = (value) => (dispatch, getState) => {
-    const authToken = getState().auth.authToken;
-
-    return fetch(`${API_BASE_URL}/protected`, {
-        method: 'GET',
-        headers: {
-            // Provide our auth token as credentials
-            Authorization: `Bearer ${authToken}`
-        }
-    })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({data}) => dispatch(fetchApplicationsSuccess(data)))
-        .catch(err => {
-            dispatch(fetchApplicationsError(err));
-        });
-};*/
-
-export const fetchApplications = value => (dispatch, getState) => {
+export const fetchApplications = (value = "") => (dispatch, getState) => {
   //fetches all applications for a given user
   const authToken = getState().auth.authToken;
-  console.log(value);
-  // TODO: SEND VALUE AS A PARAM
-  //then at some point we likely need to filter applications for this value
-  return fetch(`${API_BASE_URL}/applications`, {
+  return fetch(`${API_BASE_URL}/applications?status=${value}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -85,7 +64,6 @@ export const deleteApplication = id => (dispatch, getState) => {
   //deletes a single application by using its id
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/applications/${id}`, {
-    //do I need to return here?
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",

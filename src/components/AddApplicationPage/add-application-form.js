@@ -1,24 +1,33 @@
 import React from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { editApplication } from "../actions/protected-data";
-import Input from "./input";
+import { addApplication, editApplication } from "../../actions/protected-data";
+import Input from "../input";
+// import "../../index.css";
 
-export class EditApplicationForm extends React.Component {
+export class AddApplicationForm extends React.Component {
   onSubmit(values) {
-    const { companyName, positionTitle, location, postingLink, notes } = values;
+    const {
+      companyName,
+      positionTitle,
+      status,
+      location,
+      postingLink,
+      notes
+    } = values;
     const application = {
       companyName,
       positionTitle,
       location,
       postingLink,
       notes,
-      id: this.props.applicationDetails.id
+      status
     };
     console.log(application);
-
-    return this.props
-      .dispatch(editApplication(application))
-      .then(() => console.log("REDIRECT"));
+    var self = this;
+    console.log(this);
+    this.props
+      .dispatch(addApplication(application))
+      .then(() => self.props.history.push("/home"));
   }
   render() {
     return (
@@ -107,15 +116,16 @@ export class EditApplicationForm extends React.Component {
         <Field component={Input} type="text" name="notes" className="notes" />
         <br />
         <button type="submit" className="add-application-form-button">
-          Edit application
+          Add new application
         </button>
+        {/*Need to call our action here to collect the application information*/}
       </form>
     );
   }
 }
 
 export default reduxForm({
-  form: "edit-application",
+  form: "add-application",
   onSubmitFail: (errors, dispatch) =>
-    dispatch(focus("edit-application", Object.keys(errors)[0]))
-})(EditApplicationForm);
+    dispatch(focus("add-application", Object.keys(errors)[0]))
+})(AddApplicationForm);

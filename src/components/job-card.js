@@ -7,9 +7,6 @@ import {
 import { connect } from "react-redux";
 
 export class JobCard extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(fetchSingleApplicationById(this.props.id));
-  }
   render() {
     return (
       <div className="job-card">
@@ -49,9 +46,7 @@ export class JobCard extends React.Component {
   }
 }
 const mapStateToProps = state => {
-  return {
-    applicationDetails: state.protectedData.applicationDetails
-  };
+  return {};
 };
 
 export default connect(mapStateToProps)(JobCard);
