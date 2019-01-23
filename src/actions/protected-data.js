@@ -1,5 +1,4 @@
 import { API_BASE_URL } from "../config";
-import { normalizeResponseErrors } from "./utils";
 
 export const FETCH_APPLICATIONS_SUCCESS = "FETCH_APPLICATIONS_SUCCESS";
 export const fetchApplicationsSuccess = data => ({

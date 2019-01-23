@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { addApplication, editApplication } from "../../actions/protected-data";
+import { addApplication } from "../../actions/protected-data";
 import Input from "../input";
 // import "../../index.css";
 
@@ -63,7 +63,7 @@ export class AddApplicationForm extends React.Component {
           name="postingLink"
           className="postingLink"
         />
-        <div>
+        <div className="add-radio-buttons">
           <div>Where are you in the application process?:</div>
           <br />
           <div className="radiobutton">
@@ -72,7 +72,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="pending"
+                value="Pending"
               />
               Pending Completion
             </label>
@@ -83,7 +83,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="applied"
+                value="Applied"
               />
               Applied
             </label>
@@ -94,7 +94,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="interviewed"
+                value="Interviewed"
               />
               Interviewing
             </label>
@@ -105,7 +105,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="offered"
+                value="Offered"
               />
               Offered position
             </label>

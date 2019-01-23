@@ -8,8 +8,6 @@ import Home from "./Home";
 import RegistrationPage from "./registration-page";
 import AddApplicationPage from "./AddApplicationPage";
 import EditApplicationPage from "./EditApplicationPage";
-import ApplicationDetailPage from "./ApplicationDetailPage";
-
 
 import { refreshAuthToken } from "../actions/auth";
 
@@ -50,8 +48,7 @@ export class App extends React.Component {
         <Route exact path="/home" component={Home} />
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/addApplication" component={AddApplicationPage} />
-        <Route exact path="/edit/:id" component={EditApplicationPage}/>
-
+        <Route exact path="/edit/:id" component={EditApplicationPage} />
       </div>
     );
   }

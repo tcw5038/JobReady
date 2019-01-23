@@ -2,8 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import LoginForm from "../login-form";
-import RegistrationForm from "../registration-form";
-import HeaderBar from "../header-bar";
 
 export function LandingPage(props) {
   if (props.loggedIn) {
@@ -23,7 +21,8 @@ export function LandingPage(props) {
         <div className="row">
           <div className="column">
             <h1 className="landing-title">
-              Get organized. <br />Get your dream job.
+              Get organized. <br />
+              Get your dream job.
             </h1>
             <h3 className="landing-sub-title">
               Keep track of your job application process so that you can have a
@@ -39,14 +38,22 @@ export function LandingPage(props) {
         <h1 className="app-description-title">Why JobReady?</h1>
         <div className="row">
           <div className="column">
-            <img className="description-image" src="/images/desk.jpg" />
+            <img
+              className="description-image"
+              src="/images/desk.jpg"
+              alt="Desk"
+            />
             <p className="description-text">
               Keep track of all your job postings so that you can worry about
               more important things happening in your life.
             </p>
           </div>
           <div className="column">
-            <img className="description-image" src="/images/architecture.jpg" />
+            <img
+              className="description-image"
+              src="/images/architecture.jpg"
+              alt="Architecture"
+            />
             <p className="description-text">
               Quickly look through jobs that you applied to, ones you are
               currently interviewing for, and ones that you still need to apply
@@ -54,7 +61,11 @@ export function LandingPage(props) {
             </p>
           </div>
           <div className="column">
-            <img className="description-image" src="/images/handshake.jpg" />
+            <img
+              className="description-image"
+              src="/images/handshake.jpg"
+              alt="Handshake"
+            />
             <p className="description-text">
               Edit existing job postings by adding notes so that you can keep
               track of peoples' names, interview questions, and anything else

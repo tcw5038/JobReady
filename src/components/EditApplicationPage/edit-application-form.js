@@ -1,7 +1,7 @@
 import React from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { editApplication } from "../actions/protected-data";
-import Input from "./input";
+import { editApplication } from "../../actions/protected-data";
+import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
   onSubmit(values) {

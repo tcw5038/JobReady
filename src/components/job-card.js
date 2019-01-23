@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  fetchSingleApplicationById,
-  deleteApplication
-} from "../actions/protected-data";
+import { deleteApplication } from "../actions/protected-data";
 import { connect } from "react-redux";
 
 export class JobCard extends React.Component {

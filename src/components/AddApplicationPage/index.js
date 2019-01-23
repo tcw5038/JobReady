@@ -1,7 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
 import requiresLogin from "../requires-login";
-import { Link, Redirect } from "react-router-dom";
 import HeaderBar from "../header-bar";
 import AddApplicationForm from "./add-application-form";
 import "./index.css";
