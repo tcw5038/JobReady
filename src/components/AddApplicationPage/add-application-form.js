@@ -73,7 +73,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="Pending"
+                value="pending"
               />
             </label>
           </div>
@@ -84,7 +84,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="Applied"
+                value="applied"
               />
             </label>
           </div>
@@ -95,7 +95,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="Interviewed"
+                value="interviewed"
               />
             </label>
           </div>
@@ -106,7 +106,7 @@ export class AddApplicationForm extends React.Component {
                 name="status"
                 component={Input}
                 type="radio"
-                value="Offered"
+                value="offered"
               />
             </label>
           </div>

@@ -4,8 +4,7 @@ import { editApplication } from "../../actions/protected-data";
 import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
-  componentDidMount() {
-    console.log(this.props.applicationDetails);
+  componentDidUpdate() {
     this.handleInitialize();
   }
 
@@ -31,7 +30,6 @@ export class EditApplicationForm extends React.Component {
       notes,
       id: this.props.applicationDetails.id
     };
-    console.log(application);
 
     return this.props
       .dispatch(editApplication(application))

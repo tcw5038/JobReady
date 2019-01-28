@@ -12,8 +12,6 @@ export class EditApplicationPage extends React.Component {
   }
 
   render() {
-    console.log("EDIT PAGE", this.props);
-    console.log(this.props.applicationDetails);
     return (
       <div className="home">
         <HeaderBar />

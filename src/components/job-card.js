@@ -5,6 +5,10 @@ import { connect } from "react-redux";
 
 export class JobCard extends React.Component {
   render() {
+    console.log(this.props.dateAdded);
+    let dateString = "" + this.props.dateAdded;
+    dateString = dateString.slice(0, 10);
+    console.log(dateString);
     return (
       <div className="job-card">
         <div className="row">
@@ -16,7 +20,7 @@ export class JobCard extends React.Component {
           </div>
           <div className="column">
             <div className="job-location">{this.props.location}</div>
-            <div className="job-date-added">{this.props.dateAdded}</div>
+            <div className="job-date-added">{dateString}</div>
           </div>
           <div className="column">
             {/* <Link to="/editApplication"><button className="job-card-button">Edit Application</button></Link> */}

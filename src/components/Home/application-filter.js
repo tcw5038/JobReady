@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 export class FilterContainer extends React.Component {
   handleFilterClicked(value) {
-    console.log("Filter clicked", value);
     this.props.dispatch(fetchApplications(value));
   }
 

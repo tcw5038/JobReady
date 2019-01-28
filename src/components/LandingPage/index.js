@@ -77,7 +77,7 @@ export function LandingPage(props) {
       <div className="get-started-cta-wrapper">
         <h1 className="cta-text">Like what you see?</h1>
         <Link to="/register">
-          <button class="cta-button">Get started</button>
+          <button className="cta-button">Get started</button>
         </Link>
       </div>
     </div>
