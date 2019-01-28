@@ -11,7 +11,6 @@ import "./index.css";
 export class HomePage extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchApplications(""));
-    console.log(this.props.applications);
   }
   render() {
     let applications = this.props.applications.map(application => (

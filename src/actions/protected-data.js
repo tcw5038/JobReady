@@ -69,7 +69,7 @@ export const deleteApplication = id => (dispatch, getState) => {
       Authorization: `Bearer ${authToken}`
     }
   })
-    .then(dispatch(fetchApplications()))
+    .then(res => dispatch(fetchApplications()))
     .catch(error => {
       dispatch(fetchApplicationsError(error));
     });
