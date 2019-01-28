@@ -5,6 +5,10 @@ import {
   FETCH_SINGLE_APPLICATION_ERROR
 } from "../actions/protected-data";
 
+let date = new Date();
+date.toISOString().slice(0, 10);
+console.log(date);
+
 const initialState = {
   error: null,
   applications: [],
@@ -12,7 +16,7 @@ const initialState = {
     companyName: "",
     positionTitle: "",
     location: "",
-    dateAdded: new Date(),
+    dateAdded: new Date().toISOString().slice(0, 10),
     postingLink: "",
     status: "Pending",
     notes: ""

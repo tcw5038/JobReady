@@ -6,21 +6,19 @@
 .add-application-form {
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  width: 500px;
 }
 
 .companyName,
 .positionTitle,
 .location,
-.postingLink,
-.notes {
+.postingLink {
   width: 100%;
   padding: 12px;
   margin-top: 4px;
   margin-bottom: 10px;
   display: inline-block;
   border: 1px solid rgb(139, 139, 139);
-  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -32,6 +30,7 @@
   background-color: #222b40;
   border-radius: 4px;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .add-application-form-button:hover {
@@ -40,18 +39,18 @@
   cursor: pointer;
 }
 
-input[type="radio"] {
-  font-size: 40px;
-}
-
 /*
 .radiobutton {
   display: inline-block;
   float: right;
   padding-left: 20px;
 }
+*/
 
-.add-radio-buttons {
-  padding-left: 5%;
+.radiobutton {
+  max-width: 200px;
   display: inline-block;
-}*/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}

@@ -68,49 +68,50 @@ export class AddApplicationForm extends React.Component {
           <br />
           <div className="radiobutton">
             <label>
+              Pending Completion
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="Pending"
               />
-              Pending Completion
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Applied
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="Applied"
               />
-              Applied
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Interviewing
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="Interviewed"
               />
-              Interviewing
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Offered position
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="Offered"
               />
-              Offered position
             </label>
           </div>
         </div>
+
         <br />
         <label htmlFor="notes">Notes:</label>
         <Field component={Input} type="text" name="notes" className="notes" />
@@ -118,7 +119,6 @@ export class AddApplicationForm extends React.Component {
         <button type="submit" className="add-application-form-button">
           Add new application
         </button>
-        {/*Need to call our action here to collect the application information*/}
       </form>
     );
   }

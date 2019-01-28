@@ -1,9 +1,26 @@
 import React from "react";
-import { Field, reduxForm, focus } from "redux-form";
+import { Field, reduxForm, focus, initialize } from "redux-form";
 import { editApplication } from "../../actions/protected-data";
 import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
+  componentDidMount() {
+    console.log(this.props.applicationDetails);
+    this.handleInitialize();
+  }
+
+  handleInitialize() {
+    const initData = {
+      companyName: this.props.applicationDetails.companyName,
+      positionTitle: this.props.applicationDetails.positionTitle,
+      location: this.props.applicationDetails.location,
+      postingLink: this.props.applicationDetails.postingLink,
+      notes: this.props.applicationDetails.notes
+    };
+
+    this.props.initialize(initData);
+  }
+
   onSubmit(values) {
     const { companyName, positionTitle, location, postingLink, notes } = values;
     const application = {
@@ -18,7 +35,7 @@ export class EditApplicationForm extends React.Component {
 
     return this.props
       .dispatch(editApplication(application))
-      .then(() => console.log("REDIRECT"));
+      .then(() => this.props.history.push("/home"));
   }
   render() {
     return (
@@ -59,46 +76,46 @@ export class EditApplicationForm extends React.Component {
           <br />
           <div className="radiobutton">
             <label>
+              Pending Completion
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="pending"
               />
-              Pending Completion
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Applied
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="applied"
               />
-              Applied
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Interviewing
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="interviewed"
               />
-              Interviewing
             </label>
           </div>
           <div className="radiobutton">
             <label>
+              Offered position
               <Field
                 name="status"
                 component={Input}
                 type="radio"
                 value="offered"
               />
-              Offered position
             </label>
           </div>
         </div>

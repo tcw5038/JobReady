@@ -13,6 +13,7 @@ export class EditApplicationPage extends React.Component {
 
   render() {
     console.log("EDIT PAGE", this.props);
+    console.log(this.props.applicationDetails);
     return (
       <div className="home">
         <HeaderBar />
@@ -20,6 +21,7 @@ export class EditApplicationPage extends React.Component {
         <EditApplicationForm
           applicationDetails={this.props.applicationDetails}
           onSubmit={values => this.onSubmit(values)}
+          history={this.props.history}
         />
       </div>
     );

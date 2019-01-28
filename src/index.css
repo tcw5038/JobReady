@@ -5,29 +5,28 @@ html {
   font-family: sans-serif;
 }
 
-
 /*----------HEADER BAR----------*/
 .header-bar {
   height: 50px;
   background-color: #222b40;
-  position:fixed;
-  top:0;
-  overflow:hidden;
-  width:100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
-.header-bar-title{
-  color:white;
+.header-bar-title {
+  color: white;
   font-family: athelas, serif;
-  padding-top:8px;
-  padding-left:40px;
-  font-size:30px;
+  padding-top: 8px;
+  padding-left: 40px;
+  font-size: 30px;
 }
 
 .header-bar-right {
   float: right;
-  padding-right:20px;
+  padding-right: 20px;
 }
 
 .header-bar-right a {
@@ -40,47 +39,41 @@ html {
 }
 
 .header-bar-right a:hover {
-  font-weight:600;
-  cursor:pointer;
+  font-weight: 600;
+  cursor: pointer;
 }
-
-
 
 /*----------LANDING PAGE TITLE STYLES----------*/
-.landing-title{
-  padding-top:120px;
-  padding-left:100px;
+.landing-title {
+  padding-top: 120px;
+  padding-left: 100px;
   font-family: athelas, serif;
-  color:white;
-  font-size:50px;
+  color: white;
+  font-size: 50px;
 }
 
-.landing-sub-title{
-  color:white;
-  padding-left:100px;
-  font-weight:400;
-  font-size:20px;
+.landing-sub-title {
+  color: white;
+  padding-left: 100px;
+  font-weight: 400;
+  font-size: 20px;
 }
-
 
 /*----------LANDING PAGE GENERAL STYLES----------*/
 
-
-.landing-page{
-  background-image: url(/images/background.jpg); 
-  background-position:center;
-  background-size:cover;
-  height:550px;
-  width:100%;
+.landing-page {
+  background-image: url(/images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
 }
 
-.landing-page::before{
+.landing-page::before {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
-
 }
 
 /*----------LANDING PAGE FIRST FLEXBOX STYLES----------*/
-
 
 .row {
   display: flex;
@@ -97,89 +90,88 @@ html {
 }
 
 /*----------APP DESCRIPTION----------*/
-.app-description-wrapper{
-  padding-top:175px;
-  height:650px;
+.app-description-wrapper {
+  padding-top: 175px;
+  height: 650px;
 }
 
-.app-description-title{
+.app-description-title {
   font-family: athelas, serif;
-  text-align:center;
-  font-size:50px;
-  color:#202020;
-}
-
-.description-text{
-  padding:25px;
+  text-align: center;
+  font-size: 50px;
   color: #202020;
-  font-weight:400;
 }
 
-.description-image{
-  padding:25px;
-  max-width:100%;
+.description-text {
+  padding: 25px;
+  color: #202020;
+  font-weight: 400;
+}
+
+.description-image {
+  padding: 25px;
+  max-width: 100%;
   border-radius: 10px;
 }
 
 /*----------CTA WRAPPER----------*/
-.get-started-cta-wrapper{
-  background-color:#222b40;
-  height:180px;
-  text-align:center;
+.get-started-cta-wrapper {
+  background-color: #222b40;
+  height: 180px;
+  text-align: center;
 }
 
-.cta-text{
-  padding-top:25px;
-  color:white;
+.cta-text {
+  padding-top: 25px;
+  color: white;
   font-family: athelas, serif;
-  text-align:center;
+  text-align: center;
 }
 
-.cta-button{
-  width:30%;
-  height:40px;
-  color:white;
-  font-size:16px;
-  background-color:#222b40;
+.cta-button {
+  width: 30%;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  background-color: #222b40;
   border-radius: 4px;
 }
 
-.cta-button:hover{
-  background-color:#222b4094;
-  cursor:pointer;
+.cta-button:hover {
+  background-color: #222b4094;
+  cursor: pointer;
 }
-
 
 /*----------SIGN IN FORM----------*/
 
-.signin-form{
-  padding-top:150px;
-  padding-left:100px;
-  color:white;
+.signin-form {
+  padding-top: 150px;
+  padding-left: 100px;
+  color: white;
 }
 
-
-.sign-in-button{
-  width:50%;
-  height:40px;
-  color:white;
-  font-size:16px;
-  background-color:#222b40;
+.sign-in-button {
+  width: 50%;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  background-color: #222b40;
   border-radius: 4px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
-.sign-in-button:hover{
-  background-color:white;
-  color:#202020;
-  cursor:pointer;
+.sign-in-button:hover {
+  background-color: white;
+  color: #202020;
+  cursor: pointer;
 }
 
-#usernameLogin, #passwordLogin {
+#usernameLogin,
+#passwordLogin {
   width: 50%;
   padding: 12px 20px;
-  margin-top:4px;
-  margin-bottom:10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -187,124 +179,130 @@ html {
 }
 
 /*----------SIGNUP PAGE AND STYLES----------*/
-.home{
-  background-color:lightgrey;
+.home {
+  background-color: lightgrey;
   height: calc(100vh);
 }
 
-.signup-form{
-  margin-left:auto;
-  margin-right:auto;
-  width:300px;
+.signup-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
-#firstName, #lastName, #username, #password, #passwordConfirm, #companyName, #positionTitle, #location, #postingLink, #notes{
+#firstName,
+#lastName,
+#username,
+#password,
+#passwordConfirm,
+#companyName,
+#positionTitle,
+#location,
+#postingLink,
+#notes {
   width: 100%;
   padding: 12px;
-  margin-top:4px;
-  margin-bottom:10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
   display: inline-block;
   border: 1px solid rgb(139, 139, 139);
   border-radius: 4px;
   box-sizing: border-box;
-  
 }
 
-.signup-button{
-  width:100%;
-  height:40px;
-  color:white;
-  font-size:16px;
-  background-color:#222b40;
+.signup-button {
+  width: 100%;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  background-color: #222b40;
   border-radius: 4px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
-.signup-button:hover{
-  background-color:white;
-  color:#202020;
-  cursor:pointer;
+.signup-button:hover {
+  background-color: white;
+  color: #202020;
+  cursor: pointer;
 }
 
-.login-link{/*This isn't working, how do I center align a link component? */
-  padding-top:10px;
-  text-align:center;
+.login-link {
+  /*This isn't working, how do I center align a link component? */
+  padding-top: 10px;
+  text-align: center;
 }
 
-.signup-title{
-  text-align:center;
-  padding-top:70px;
+.signup-title {
+  text-align: center;
+  padding-top: 70px;
   font-family: athelas, serif;
 }
-
 
 /*----------FOR SPECIFIC DEVICES----------*/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width:600px){
-  .landing-title{
-    padding-top:70px;
-    padding-left:0px;
-    font-size:30px;
-    text-align:center;
-  }
-  
-  .landing-sub-title{
-    padding-left:15px;
-    padding-right:15px;
-    font-weight:400;
-    font-size:18px;
-    text-align:center;
+@media only screen and (max-width: 600px) {
+  .landing-title {
+    padding-top: 70px;
+    padding-left: 0px;
+    font-size: 30px;
+    text-align: center;
   }
 
-  input[type=text],input[type=password] {
+  .landing-sub-title {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"] {
     width: 80%;
   }
-  .signin-form{
-    padding-top:20px;
-    padding-left:10px;
-    padding-right:10px;
-    text-align:center;
+  .signin-form {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
   }
-  
+
   .row {
     flex-direction: column;
   }
 
-  .header-bar-title{
-    padding-left:20px;
-    font-size:28px;
+  .header-bar-title {
+    padding-left: 20px;
+    font-size: 28px;
   }
 
-  .app-description-wrapper{
-    padding-top:55px;
-    height:1250px;
+  .app-description-wrapper {
+    padding-top: 55px;
+    height: 1250px;
   }
 
-  .app-description-title{
-    font-size:30px;
-  }
-  
-  .description-text{
-    padding-left:15px;
-    padding-right:15px;
-    padding-top:2px;
-    padding-bottom:2px;
-    font-size:16px;
-  }
-  
-  .description-image{
-    padding:10px;
-    max-width:100%;
+  .app-description-title {
+    font-size: 30px;
   }
 
+  .description-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 16px;
+  }
+
+  .description-image {
+    padding: 10px;
+    max-width: 100%;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
-} 
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-} 
+}
