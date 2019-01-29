@@ -21,6 +21,7 @@ export class EditApplicationForm extends React.Component {
   }
 
   onSubmit(values) {
+    console.log(values);
     const { companyName, positionTitle, location, postingLink, notes } = values;
     const application = {
       companyName,
@@ -30,7 +31,7 @@ export class EditApplicationForm extends React.Component {
       notes,
       id: this.props.applicationDetails.id
     };
-
+    console.log(application);
     return this.props
       .dispatch(editApplication(application))
       .then(() => this.props.history.push("/home"));
@@ -131,6 +132,7 @@ export class EditApplicationForm extends React.Component {
 
 export default reduxForm({
   form: "edit-application",
+  enableReinitialize: true,
   onSubmitFail: (errors, dispatch) =>
     dispatch(focus("edit-application", Object.keys(errors)[0]))
 })(EditApplicationForm);

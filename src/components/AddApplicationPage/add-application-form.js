@@ -4,6 +4,9 @@ import { addApplication } from "../../actions/protected-data";
 import Input from "../input";
 // import "../../index.css";
 
+const required = value =>
+  value || typeof value === "number" ? undefined : "Required";
+
 export class AddApplicationForm extends React.Component {
   onSubmit(values) {
     const {
@@ -41,6 +44,7 @@ export class AddApplicationForm extends React.Component {
           type="text"
           name="companyName"
           className="companyName"
+          validate={[required]}
         />
         <label htmlFor="positionTitle">Position Title:</label>
         <Field
@@ -48,6 +52,7 @@ export class AddApplicationForm extends React.Component {
           type="text"
           name="positionTitle"
           className="positionTitle"
+          validate={[required]}
         />
         <label htmlFor="location">Location:</label>
         <Field
@@ -55,6 +60,7 @@ export class AddApplicationForm extends React.Component {
           type="text"
           name="location"
           className="location"
+          validate={[required]}
         />
         <label htmlFor="postingLink">Link to job posting:</label>
         <Field
@@ -62,6 +68,7 @@ export class AddApplicationForm extends React.Component {
           type="text"
           name="postingLink"
           className="postingLink"
+          validate={[required]}
         />
         <div className="add-radio-buttons">
           <div>Where are you in the application process?:</div>
@@ -114,7 +121,13 @@ export class AddApplicationForm extends React.Component {
 
         <br />
         <label htmlFor="notes">Notes:</label>
-        <Field component={Input} type="text" name="notes" className="notes" />
+        <Field
+          component={Input}
+          type="text"
+          name="notes"
+          className="notes"
+          validate={[required]}
+        />
         <br />
         <button type="submit" className="add-application-form-button">
           Add new application
