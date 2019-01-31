@@ -16,7 +16,6 @@ export class EditApplicationForm extends React.Component {
       postingLink: this.props.applicationDetails.postingLink,
       notes: this.props.applicationDetails.notes
     };
-
     this.props.initialize(initData);
   }
 

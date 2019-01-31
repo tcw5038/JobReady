@@ -102,6 +102,7 @@ export const addApplication = application => (dispatch, getState) => {
 
 export const editApplication = application => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
+  console.log(application);
   return fetch(`${API_BASE_URL}/edit/applications/${application.id}`, {
     method: "PUT",
     headers: {
