@@ -1,10 +1,11 @@
 import React from "react";
 import { Field, reduxForm, focus, initialize } from "redux-form";
+import { connect } from "react-redux";
 import { editApplication } from "../../actions/protected-data";
 import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
-  componentDidUpdate() {
+  componentDidMount() {
     this.handleInitialize();
   }
 
@@ -12,28 +13,41 @@ export class EditApplicationForm extends React.Component {
     const initData = {
       companyName: this.props.applicationDetails.companyName,
       positionTitle: this.props.applicationDetails.positionTitle,
+      status: this.props.applicationDetails.status,
       location: this.props.applicationDetails.location,
       postingLink: this.props.applicationDetails.postingLink,
       notes: this.props.applicationDetails.notes
     };
+
     this.props.initialize(initData);
   }
 
   onSubmit(values) {
     console.log(values);
-    const { companyName, positionTitle, location, postingLink, notes } = values;
+    const {
+      companyName,
+      positionTitle,
+      location,
+      postingLink,
+      status,
+      notes
+    } = values;
     const application = {
       companyName,
       positionTitle,
       location,
       postingLink,
+      status,
       notes,
       id: this.props.applicationDetails.id
     };
     console.log(application);
+    var self = this;
+    console.log(this);
+
     return this.props
       .dispatch(editApplication(application))
-      .then(() => this.props.history.push("/home"));
+      .then(() => self.props.history.push("/home"));
   }
   render() {
     return (
