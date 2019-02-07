@@ -12,7 +12,6 @@ export function LandingPage(props) {
     <div className="landing-page">
       <div className="header-bar">
         <div className="header-bar-right">
-          <a href="#demo">Demo</a>
           <a href="/register">Sign up</a>
         </div>
         <div className="header-bar-title">JobReady</div>

@@ -5,7 +5,8 @@ import { editApplication } from "../../actions/protected-data";
 import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
-  componentDidMount() {
+  /*componentDidUpdate() {
+    console.log(this.props);
     this.handleInitialize();
   }
 
@@ -21,7 +22,7 @@ export class EditApplicationForm extends React.Component {
 
     this.props.initialize(initData);
   }
-
+*/
   onSubmit(values) {
     console.log(values);
     const {
@@ -146,6 +147,7 @@ export class EditApplicationForm extends React.Component {
 export default reduxForm({
   form: "edit-application",
   enableReinitialize: true,
+
   onSubmitFail: (errors, dispatch) =>
     dispatch(focus("edit-application", Object.keys(errors)[0]))
 })(EditApplicationForm);

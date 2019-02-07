@@ -27,7 +27,6 @@ export class AddApplicationForm extends React.Component {
     };
     console.log(application);
     var self = this;
-    console.log(this);
     this.props
       .dispatch(addApplication(application))
       .then(() => self.props.history.push("/home"));
