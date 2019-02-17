@@ -39,7 +39,7 @@ export function LandingPage(props) {
           <div className="column">
             <img
               className="description-image"
-              src="/images/desk.jpg"
+              src="images/desk.jpg"
               alt="Desk"
             />
             <p className="description-text">
@@ -50,7 +50,7 @@ export function LandingPage(props) {
           <div className="column">
             <img
               className="description-image"
-              src="/images/architecture.jpg"
+              src="images/architecture.jpg"
               alt="Architecture"
             />
             <p className="description-text">
@@ -62,7 +62,7 @@ export function LandingPage(props) {
           <div className="column">
             <img
               className="description-image"
-              src="/images/handshake.jpg"
+              src="images/handshake.jpg"
               alt="Handshake"
             />
             <p className="description-text">
