@@ -2,6 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import LoginForm from "../login-form";
+import desk from "../images/desk.jpg";
+import handshake from "../images/handshake.jpg";
+import architecture from "../images/architecture.jpg";
+import background from "../images/background.jpg";
 
 export function LandingPage(props) {
   if (props.loggedIn) {
@@ -37,11 +41,7 @@ export function LandingPage(props) {
         <h1 className="app-description-title">Why JobReady?</h1>
         <div className="row">
           <div className="column">
-            <img
-              className="description-image"
-              src="/images/desk.jpg"
-              alt="Desk"
-            />
+            <img className="description-image" src={desk} alt="Desk" />
             <p className="description-text">
               Keep track of all your job postings so that you can worry about
               more important things happening in your life.
@@ -50,7 +50,7 @@ export function LandingPage(props) {
           <div className="column">
             <img
               className="description-image"
-              src="/images/architecture.jpg"
+              src={architecture}
               alt="Architecture"
             />
             <p className="description-text">
@@ -62,7 +62,7 @@ export function LandingPage(props) {
           <div className="column">
             <img
               className="description-image"
-              src="/images/handshake.jpg"
+              src={handshake}
               alt="Handshake"
             />
             <p className="description-text">

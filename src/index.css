@@ -62,7 +62,7 @@ html {
 /*----------LANDING PAGE GENERAL STYLES----------*/
 
 .landing-page {
-  background-image: url(/images/background.jpg);
+  background-image: url(./components/images/background.jpg);
   background-position: center;
   background-size: cover;
   height: 550px;
