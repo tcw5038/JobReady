@@ -13,6 +13,8 @@ This app helps users keep track of their progress with their job applications. U
 
 ## Live link to the Project
 
+https://limitless-crag-64641.herokuapp.com/
+
 ## Project images:
 
 Image description here
