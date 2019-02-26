@@ -17,18 +17,14 @@ https://limitless-crag-64641.herokuapp.com/
 
 ## Project images:
 
-Image description here
-
+This is the first page that users will see. From here, users can log in, sign up, or scroll down to learn more about the functionality of the app.
 <img src="https://github.com/tcw5038/JobReady/blob/master/Images/LandingPage.PNG?raw=true"/>
 
-Image description here
+From the home page, users can view all of the applications that they have inputted. Additionally, users are able to filter their applications based on status along with being able to edit and delete individual job applications.
 
-<img src="https://github.com/tcw5038/UrbanAdventures/blob/master/Images/SignupPage.png?raw=true"/>
+<img src="https://github.com/tcw5038/JobReady/blob/master/Images/Home.PNG?raw=true"/>
 
-Image description here
+When users add a new job application, they will see this form where they will be able to put in a variety of relevant information to help them keep track of the application.
 
-<img src="https://github.com/tcw5038/UrbanAdventures/blob/master/Images/CitiesPage.png?raw=true"/>
+<img src="https://github.com/tcw5038/JobReady/blob/master/Images/AddApp.PNG?raw=true"/>
 
-Image description here
-
-<img src="https://github.com/tcw5038/UrbanAdventures/blob/master/Images/MapPage.png?raw=true"/>
