@@ -19,7 +19,7 @@ https://limitless-crag-64641.herokuapp.com/
 
 Image description here
 
-<img src="https://github.com/tcw5038/UrbanAdventures/blob/master/Images/LandingPage.png?raw=true"/>
+<img src="https://github.com/tcw5038/JobReady/blob/master/Images/LandingPage.png?raw=true"/>
 
 Image description here
 
