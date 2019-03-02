@@ -161,8 +161,7 @@ html {
 }
 
 .sign-in-button:hover {
-  background-color: white;
-  color: #202020;
+  background-color: #222b4094;
   cursor: pointer;
 }
 
@@ -221,8 +220,7 @@ html {
 }
 
 .signup-button:hover {
-  background-color: white;
-  color: #202020;
+  background-color: #222b4094;
   cursor: pointer;
 }
 

@@ -5,26 +5,25 @@ import { editApplication } from "../../actions/protected-data";
 import Input from "../input";
 
 export class EditApplicationForm extends React.Component {
-  /*componentDidUpdate() {
-    console.log(this.props);
-    this.handleInitialize();
-  }
-
-  handleInitialize() {
-    const initData = {
-      companyName: this.props.applicationDetails.companyName,
-      positionTitle: this.props.applicationDetails.positionTitle,
-      status: this.props.applicationDetails.status,
-      location: this.props.applicationDetails.location,
-      postingLink: this.props.applicationDetails.postingLink,
-      notes: this.props.applicationDetails.notes
+  componentWillMount() {
+    let id = (this.props.history.location.pathname.split('/')[2]);
+    let  currentApp = (this.props.applications.applications.filter(app => app.id === id))
+    currentApp=currentApp[0]
+    let initData = {
+      companyName: currentApp.companyName,
+      positionTitle: currentApp.positionTitle,
+      status: currentApp.status,
+      location: currentApp.location,
+      postingLink: currentApp.postingLink,
+      notes: currentApp.notes
     };
-
+    
     this.props.initialize(initData);
   }
-*/
+  
+  
+
   onSubmit(values) {
-    console.log(values);
     const {
       companyName,
       positionTitle,
@@ -42,9 +41,9 @@ export class EditApplicationForm extends React.Component {
       notes,
       id: this.props.applicationDetails.id
     };
-    console.log(application);
+    console.log(values);
     var self = this;
-    console.log(this);
+    
 
     return this.props
       .dispatch(editApplication(application))
@@ -143,10 +142,15 @@ export class EditApplicationForm extends React.Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  applications: state.protectedData
+});
+
+EditApplicationForm = connect(mapStateToProps)(EditApplicationForm);
 
 export default reduxForm({
   form: "edit-application",
-  enableReinitialize: true,
+  // enableReinitialize: true,
 
   onSubmitFail: (errors, dispatch) =>
     dispatch(focus("edit-application", Object.keys(errors)[0]))

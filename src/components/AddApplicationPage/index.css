@@ -40,8 +40,7 @@
 }
 
 .add-application-form-button:hover {
-  background-color: white;
-  color: #202020;
+  background-color: #222b4094;
   cursor: pointer;
 }
 
