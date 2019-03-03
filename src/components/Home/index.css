@@ -59,8 +59,13 @@
 }*/
 
 .job-title,
-.job-status {
+.job-status,
+.job-link {
   padding-left: 30px;
+}
+
+.job-status, .job-link{
+  padding-top:5px;
 }
 
 .job-title {
@@ -102,7 +107,8 @@
 
 @media only screen and (max-width: 600px) {
   .job-title,
-  .job-status {
+  .job-status,
+  .job-link {
     padding-left: 0;
   }
 

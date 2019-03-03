@@ -15,7 +15,11 @@ export class JobCard extends React.Component {
               {this.props.positionTitle} at {this.props.companyName}
             </div>
             <div className="job-status">{this.props.status}</div>
+            <div className="job-link">
+            <a href={this.props.postingLink}>Link to job posting</a>
           </div>
+          </div>
+         
           <div className="column">
             <div className="job-location">{this.props.location}</div>
             <div className="job-date-added">{dateString}</div>
