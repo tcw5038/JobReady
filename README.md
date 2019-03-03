@@ -3,9 +3,12 @@
 ## Full Stack Capstone project at Thinkful
 
 ## Technologies used:
-* Front End - React, Redux, HTML5, CSS3, Javascript, jQuery
+* Front End - React, Redux, Redux Form, HTML5, CSS3, Javascript, jQuery
 * Back End - Node, Express, MongoDB, Mongoose, Mocha, Passport, BCrypt
 
+## Demo account credentials
+username: myusername
+password: mypassword
 
 ## Summary of functionality:
 This app helps users keep track of their progress with their job applications. Users can add new job applications, keep track of where they are in the process, edit these applications as they progress, and delete them when they are done. Additionally, users are able to filter their jobs so that they can stay organized and see where they are in the process.
