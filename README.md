@@ -7,7 +7,7 @@
 * Back End - Node, Express, MongoDB, Mongoose, Mocha, Passport, BCrypt
 
 ## Demo account credentials
-username: myusername
+username: myusername<br>
 password: mypassword
 
 ## Summary of functionality:
