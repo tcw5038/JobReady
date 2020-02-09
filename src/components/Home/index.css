@@ -1,3 +1,8 @@
+/*----------GLOBAL STYLES----------*/
+body {
+  font-family: "Lato", sans-serif !important;
+}
+
 /*----------FILTER CHECKBOXES----------*/
 
 .checkbox {
@@ -64,8 +69,9 @@
   padding-left: 30px;
 }
 
-.job-status, .job-link{
-  padding-top:5px;
+.job-status,
+.job-link {
+  padding-top: 5px;
 }
 
 .job-title {

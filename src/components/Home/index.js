@@ -7,6 +7,7 @@ import JobCard from "../job-card";
 import FilterContainer from "./application-filter";
 import { fetchApplications } from "../../actions/protected-data";
 import "./index.css";
+// import "url('https://fonts.googleapis.com/css?family=Lato&display=swap')";
 
 export class HomePage extends React.Component {
   componentDidMount() {
