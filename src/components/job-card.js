@@ -9,18 +9,18 @@ export class JobCard extends React.Component {
     dateString = dateString.slice(0, 10);
     return (
       <div className="job-card">
-        <div className="row">
+        <div className="row mobile-line-height">
           <div className="column">
             <div className="job-title">
               {this.props.positionTitle} at {this.props.companyName}
             </div>
             <div className="job-status">{this.props.status}</div>
             <div className="job-link">
-            <a href={this.props.postingLink}>Link to job posting</a>
+              <a href={this.props.postingLink}>Link to job posting</a>
+            </div>
           </div>
-          </div>
-         
-          <div className="column">
+
+          <div className="column locationAndDate">
             <div className="job-location">{this.props.location}</div>
             <div className="job-date-added">{dateString}</div>
           </div>

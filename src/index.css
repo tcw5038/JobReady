@@ -97,6 +97,10 @@ html {
   flex: 1;
 }
 
+.column.locationAndDate {
+  margin-left: 0.1em;
+}
+
 /*----------APP DESCRIPTION----------*/
 .app-description-wrapper {
   height: 650px;
@@ -281,6 +285,10 @@ html {
 
   .row {
     flex-direction: column;
+  }
+
+  .row.mobile-line-height {
+    line-height: 1.5em;
   }
 
   .header-bar-title {

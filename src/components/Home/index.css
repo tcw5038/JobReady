@@ -63,6 +63,10 @@ body {
   cursor:pointer;
 }*/
 
+.job-location {
+  margin-bottom: 0.5em;
+}
+
 .job-title,
 .job-status,
 .job-link {
@@ -72,6 +76,7 @@ body {
 .job-status,
 .job-link {
   padding-top: 5px;
+  text-transform: capitalize;
 }
 
 .job-title {
@@ -120,14 +125,14 @@ body {
 
   .job-title {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1.4em;
   }
   .job-card-button {
     color: white;
     font-size: 16px;
     background-color: #222b40;
-    width: 200px;
-    height: 30px;
+    width: 15em;
+    height: 3em;
     margin-right: auto;
     margin-left: auto;
   }
@@ -146,7 +151,7 @@ body {
   .add-application-button {
     float: none;
     display: block;
-    width: 90%;
+    width: 95%;
     height: 40px;
     color: white;
     font-size: 16px;
@@ -159,5 +164,9 @@ body {
 
   .job-container {
     padding-top: 20px;
+  }
+
+  .notes {
+    padding-left: 0;
   }
 }
