@@ -7,6 +7,7 @@ body {
 
 .checkbox {
   display: inline;
+  padding-right: 0.4em;
 }
 
 .checkmark {
@@ -27,16 +28,18 @@ body {
   float: right;
   width: 170px;
   height: 40px;
-  color: white;
+  color: #222b40;
   font-size: 16px;
-  background-color: #222b40;
+  background-color: fff;
   border-radius: 4px;
-  margin-right: 5%;
+  margin-right: 2.5%;
+  border: 2px solid;
 }
 
 .add-application-button:hover {
   cursor: pointer;
-  background-color: #222b40e1;
+  color: #fff;
+  background-color: rgba(34, 43, 64, 0.2);
 }
 
 /*----------JOB CARDS----------*/
@@ -167,6 +170,12 @@ body {
   }
 
   .notes {
-    padding-left: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+
+  .checkbox {
+    padding-right: 0.4em;
   }
 }

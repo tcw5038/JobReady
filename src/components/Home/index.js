@@ -24,9 +24,7 @@ export class HomePage extends React.Component {
         <div className="page-action-container">
           <FilterContainer />
           <Link to="/addApplication">
-            <button className="add-application-button">
-              Add new application
-            </button>
+            <button className="add-application-button">Add Application</button>
           </Link>
         </div>
         <div className="job-container">{applications}</div>

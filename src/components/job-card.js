@@ -16,7 +16,9 @@ export class JobCard extends React.Component {
             </div>
             <div className="job-status">{this.props.status}</div>
             <div className="job-link">
-              <a href={this.props.postingLink}>Link to job posting</a>
+              <a href={this.props.postingLink} target="_blank">
+                Link to job posting
+              </a>
             </div>
           </div>
 
