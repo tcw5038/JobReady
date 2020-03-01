@@ -39,7 +39,7 @@ body {
 .add-application-button:hover {
   cursor: pointer;
   color: #fff;
-  background-color: rgba(34, 43, 64, 0.2);
+  background-color: rgba(34, 43, 64, 1);
 }
 
 /*----------JOB CARDS----------*/
